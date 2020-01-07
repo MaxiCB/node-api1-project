@@ -1,8 +1,10 @@
 const express = require("express");
+let cors = require("cors");
 let db = require("./data/db");
 
 const server = express();
 server.use(express.json());
+server.use(cors());
 
 server.get("/", (req, res) => {
   res.send("Hello World");
